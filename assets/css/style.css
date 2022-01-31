@@ -1150,6 +1150,7 @@ body {
      background: url(../img/footer-hero.jpg) no-repeat ;
     height: 100%;
     width: 100%;
+    padding-top: 95px;
     display: table;
     position: relative;
 }
