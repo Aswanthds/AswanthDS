@@ -1147,8 +1147,11 @@ body {
 ================================================== */
 
 .site-footer {
-    background-color: #91fae0;
-    padding-top: 95px;
+     background: url(../img/portfolio-hero.jpg) no-repeat center / cover;
+    height: 100%;
+    width: 100%;
+    display: table;
+    position: relative;
 }
 
 .site-footer .site-title {
