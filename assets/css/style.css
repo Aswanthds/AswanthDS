@@ -1147,7 +1147,7 @@ body {
 ================================================== */
 
 .site-footer {
-     background: url(../img/footer-hero.jpg) no-repeat center / cover;
+     background: url(../img/footer-hero.jpg) no-repeat ;
     height: 100%;
     width: 100%;
     display: table;
