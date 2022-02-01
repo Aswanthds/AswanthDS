@@ -1147,12 +1147,9 @@ body {
 ================================================== */
 
 .site-footer {
-     background: url(../img/footer-hero.jpg) no-repeat center / cover ;
-    height: 100%;
-    width: 100%;
+     background-color: #f5f5f8;
     padding-top: 95px;
-    display: table;
-    position: relative;
+  
 }
 
 .site-footer .site-title {
