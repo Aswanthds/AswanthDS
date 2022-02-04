@@ -44,7 +44,7 @@ a {
     -o-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
     cursor: pointer;
-    color: #9fa3a7;
+    color: #ebebeb;
 }
 
 a:focus,
@@ -58,7 +58,7 @@ p {
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 300;
-    color: #9fa3a7;
+    color: #2a2b2b;
     line-height: 22px;
 }
 
@@ -75,7 +75,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: #26292c;
+    color: #f7f7f7;
 }
 
 p+p {
@@ -103,7 +103,7 @@ p+p {
 }
 
 .btn-border {
-    border: 1px solid #26272d;
+    border: 1px solid #f5f5f5;
 }
 
 .btn-fill {
@@ -657,6 +657,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    
 }
 
 
@@ -830,7 +831,7 @@ body {
 ================================================== */
 
 .hero {
-    background: url(../img/portfolio-hero.jpg) no-repeat center / cover;
+    background: url(../img/portfolio-hero.png) no-repeat center / cover;
     height: 100%;
     width: 100%;
     display: table;
@@ -839,7 +840,7 @@ body {
 
 .overlay:before {
     content: '';
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(192,192,192,0.3);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -864,6 +865,7 @@ body {
 
 .hero-text h1 {
     position: relative;
+    color: #fff ;
     margin: 0;
 }
 
@@ -871,17 +873,20 @@ body {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
-    color: #26272d;
-}
+     color: #fff ;
+
+    }
 
 .hero-text .btn {
     position: relative;
+    color: #fff ;
+
     background-color: transparent;
 }
 
 .hero-text .btn:hover {
-    background-color: #26272d;
-    color: #fff;
+    background-color: #fff;
+    color: #26272d;
 }
 
 .hero .breadcrumb {
@@ -925,7 +930,7 @@ body {
 }
 
 .portfolio-hero {
-    background: url(../img/portfolio-hero.jpg) no-repeat center / cover;
+    background: url(../img/portfolio-hero.png) no-repeat center / cover;
 }
 
 .blog-hero {
@@ -945,6 +950,8 @@ body {
 
 .site-section {
     padding: 100px 0 140px;
+    background : #ffff
+;
 }
 
 .subheading-text {
@@ -956,6 +963,8 @@ body {
     position: relative;
     margin: 0;
     padding-bottom: 70px;
+
+color: #2a2b2b;
 }
 
 .heading-separator:after {
@@ -976,6 +985,8 @@ body {
 .section-features h2 {
     padding-bottom: 40px;
     font-size: 30px;
+color: #2a2b2b ;
+
 }
 
 .section-features img {
@@ -1054,6 +1065,8 @@ body {
 .portfolio-item {
     height: 190px;
     position: relative;
+   
+  
 }
 
 .portfolio-item:before {
@@ -1128,6 +1141,7 @@ body {
 .section-newsletter h2 {
     padding-bottom: 30px;
     margin: 0;
+    color: #2a2b2b ;
 }
 
 .newsletter-group {
@@ -1147,7 +1161,7 @@ body {
 ================================================== */
 
 .site-footer {
-     background-color: #f5f5f8;
+     background-color: grey;
     padding-top: 95px;
   
 }
@@ -1174,6 +1188,8 @@ body {
 .contact-links li {
     position: relative;
 }
+ 
+
 
 .contact-links li i {
     position: absolute;
@@ -1181,7 +1197,7 @@ body {
     width: 20px;
     text-align: center;
     font-size: 18px;
-    color: #8c8f94;
+    color: #ffffff;
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -1201,7 +1217,7 @@ body {
 .list-unstyled li a,
 .list-unstyled li p {
     font-size: 16px;
-    color: #8c8f94;
+    color: #ffff;
     font-weight: 300;
 }
 
@@ -1209,6 +1225,11 @@ body {
 .list-unstyled li.active a {
     color: #6fc754;
 }
+
+.site-footer p{
+  color: #ffff;
+}
+
 
 
 /* Copyright */
@@ -1279,7 +1300,7 @@ a.linkedin-bg:hover {
     font-size: 9px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #26272d;
+    color: #ffff;
 }
 
 .copyright p+p {
@@ -1656,13 +1677,13 @@ a.linkedin-bg:hover {
 
 .contact-info h3 {
     margin-left: 0;
-    color: #8c8f94;
+    color: #f2f2f2;
 }
 
 .contact-info .list-unstyled li {
     font-size: 14px;
     font-weight: 300;
-    color: #8c8f94;
+    color: #f2f2f2;
 }
 
 .contact-info .list-unstyled+h3,
