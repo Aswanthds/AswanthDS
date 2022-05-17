@@ -57,9 +57,10 @@ a:hover {
 p {
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 5300;
     color: #2a2b2b;
     line-height: 22px;
+
 }
 
 h1 {
@@ -657,7 +658,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    
+
 }
 
 
@@ -838,18 +839,6 @@ body {
     position: relative;
 }
 
-.overlay:before {
-    content: '';
-    background-color: rgb(54,69,79,0.3);
-
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
 .hero-content {
     display: table-cell;
     vertical-align: middle;
@@ -866,7 +855,7 @@ body {
 
 .hero-text h1 {
     position: relative;
-    color: #fff ;
+    color: #fff;
     margin: 0;
 }
 
@@ -874,13 +863,13 @@ body {
     position: relative;
     margin: 45px 0 30px;
     font-size: 20px;
-     color: #fff ;
+    color: #fff;
 
-    }
+}
 
 .hero-text .btn {
     position: relative;
-    color: #fff ;
+    color: #fff;
 
     background-color: transparent;
 }
@@ -931,12 +920,12 @@ body {
 }
 
 .portfolio-hero {
-    background: url(../img/portfolio-hero.png) no-repeat center / cover;
+    background: url(../img/port-bg.jpg) no-repeat center / cover;
 }
 
-.blog-hero {
+/* .blog-hero {
     background: url(../img/blog-hero.jpg) no-repeat center / cover;
-}
+} */
 
 .contact-hero {
     background: url(../img/contact-hero.jpg) no-repeat center / cover;
@@ -951,8 +940,7 @@ body {
 
 .site-section {
     padding: 100px 0 140px;
-    background : #ebecf0
-;
+    background: url(../img/cool-background.png) no-repeat center / cover;
 }
 
 .subheading-text {
@@ -965,7 +953,7 @@ body {
     margin: 0;
     padding-bottom: 70px;
 
-color: #2a2b2b;
+    color: #2a2b2b;
 }
 
 .heading-separator:after {
@@ -986,7 +974,7 @@ color: #2a2b2b;
 .section-features h2 {
     padding-bottom: 40px;
     font-size: 30px;
-color: #2a2b2b ;
+    color: #2a2b2b;
 
 }
 
@@ -1061,13 +1049,13 @@ color: #2a2b2b ;
 
 .portfolio-item {
     margin-top: 30px;
+    border: solid 4px black;
 }
 
 .portfolio-item {
     height: 190px;
     position: relative;
-   
-  
+
 }
 
 .portfolio-item:before {
@@ -1142,7 +1130,7 @@ color: #2a2b2b ;
 .section-newsletter h2 {
     padding-bottom: 30px;
     margin: 0;
-    color: #2a2b2b ;
+    color: #2a2b2b;
 }
 
 .newsletter-group {
@@ -1151,6 +1139,7 @@ color: #2a2b2b ;
 
 .newsletter-group .form-control {
     padding-right: 125px;
+    background-color: #2a2b2b;
 }
 
 .newsletter-group .btn {
@@ -1162,9 +1151,9 @@ color: #2a2b2b ;
 ================================================== */
 
 .site-footer {
-     background-color: #36454F;
+    background-color: #5f6461;
     padding-top: 95px;
-  
+
 }
 
 .site-footer .site-title {
@@ -1189,7 +1178,7 @@ color: #2a2b2b ;
 .contact-links li {
     position: relative;
 }
- 
+
 
 
 .contact-links li i {
@@ -1227,8 +1216,8 @@ color: #2a2b2b ;
     color: #6fc754;
 }
 
-.site-footer p{
-  color: #ffff;
+.site-footer p {
+    color: #ffff;
 }
 
 
