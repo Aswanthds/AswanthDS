@@ -949,6 +949,7 @@ body {
 
 .site-section {
     padding: 100px 0 140px;
+    box-shadow: inset 0 1px 1px #f11b1b13, 0 0 8px #52a8ec99;
     background: url(../img/cool-background.png) no-repeat center / cover;
 }
 
@@ -978,6 +979,8 @@ body {
 }
 
 
+
+
 /* Section: Features */
 
 .section-features h2 {
@@ -991,6 +994,8 @@ body {
     position: absolute;
     right: 30px;
     height: 300px;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
 
@@ -1227,7 +1232,18 @@ body {
 }
 
 .site-footer p {
-    color: #ffff;
+    color: #ffffff;
+    font-style: oblique;
+    text-align: left;
+}
+
+.site-footer .p_about-me {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: #eeff00 solid 3px;
+    border-radius: 11.5px;
+    border-style: groove;
+    text-align: center;
+
 }
 
 
@@ -1898,4 +1914,11 @@ a.linkedin-bg:hover {
     .w3l-contacts-12 .line {
         margin: 3em 0;
     }
+<<<<<<< HEAD
 }
+
+
+
+=======
+}
+>>>>>>> 7b42ffe7d8b0a50f2f87add89ea37620efc432e5
