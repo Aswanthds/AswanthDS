@@ -1,17 +1,17 @@
-$(function() {
+$(function () {
 
     var delay = 0,
         setTimeoutConst;
     $('.site-navigation:not(.onclick) .navbar-nav>li.dropdown, .site-navigation:not(.onclick) li.dropdown>ul>li.dropdown').hover(
-        function() {
+        function () {
             var $this = $(this);
-            setTimeoutConst = setTimeout(function() {
+            setTimeoutConst = setTimeout(function () {
                 $this.addClass('open').slideDown();
                 $this.find('.dropdown-toggle').addClass('disabled');
             }, delay);
 
         },
-        function() {
+        function () {
             clearTimeout(setTimeoutConst);
             $(this).removeClass('open');
             $(this).find('.dropdown-toggle').removeClass('disabled');
@@ -27,7 +27,7 @@ $(function() {
     });
 
     // menu click event
-    $('.slicknav_btn').click(function() {
+    $('.slicknav_btn').click(function () {
         $(this).toggleClass('act');
         if ($(this).hasClass('act')) {
             $('.slicknav_menu').addClass('act');
@@ -38,14 +38,14 @@ $(function() {
 
     //Counters
     if ($(".counter-item [data-to]").length > 0) {
-        $(".counter-item [data-to]").each(function() {
+        $(".counter-item [data-to]").each(function () {
             var stat_item = $(this),
                 offset = stat_item.offset().top;
             if ($(window).scrollTop() > (offset - 800) && !(stat_item.hasClass('counting'))) {
                 stat_item.addClass('counting');
                 stat_item.countTo();
             };
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(window).scrollTop() > (offset - 800) && !(stat_item.hasClass('counting'))) {
                     stat_item.addClass('counting');
                     stat_item.countTo();
@@ -55,27 +55,27 @@ $(function() {
     };
 
     //shuffle.js
-    var shuffleme = (function($) {
+    var shuffleme = (function ($) {
         'use strict';
         var $grid = $('#grid'), //locate what we want to sort 
             $filterOptions = $('.portfolio-sorting li'), //locate the filter categories
 
-            init = function() {
+            init = function () {
 
                 // None of these need to be executed synchronously
-                setTimeout(function() {
+                setTimeout(function () {
                     listen();
                     setupFilters();
                 }, 100);
 
                 $("#grid .col-md-4").slice(0, 4).show();
 
-                $("#loadMore").on('click', function(e) {
+                $("#loadMore").on('click', function (e) {
                     e.preventDefault();
                     $("#grid .col-md-4:hidden")
                         .slice(0, 4)
                         .fadeIn()
-                        .each(function() {
+                        .each(function () {
                             $grid.shuffle('appended', $(this));
                         });
 
@@ -93,9 +93,9 @@ $(function() {
 
 
             // Set up button clicks
-            setupFilters = function() {
+            setupFilters = function () {
                 var $btns = $filterOptions.children();
-                $btns.on('click', function(e) {
+                $btns.on('click', function (e) {
                     e.preventDefault();
                     var $this = $(this),
                         isActive = $this.hasClass('active'),
@@ -120,13 +120,13 @@ $(function() {
             // the height of the picture-item is dependent on the image
             // I recommend using imagesloaded to determine when an image is loaded
             // but that doesn't support IE7
-            listen = function() {
-                var debouncedLayout = $.throttle(300, function() {
+            listen = function () {
+                var debouncedLayout = $.throttle(300, function () {
                     $grid.shuffle('update');
                 });
 
                 // Get all images inside shuffle
-                $grid.find('img').each(function() {
+                $grid.find('img').each(function () {
                     var proxyImage;
 
                     // Image already loaded
@@ -136,7 +136,7 @@ $(function() {
 
                     // If none of the checks above matched, simulate loading on detached element.
                     proxyImage = new Image();
-                    $(proxyImage).on('load', function() {
+                    $(proxyImage).on('load', function () {
                         $(this).off('load');
                         debouncedLayout();
                     });
@@ -145,7 +145,7 @@ $(function() {
                 });
 
                 // Because this method doesn't seem to be perfect.
-                setTimeout(function() {
+                setTimeout(function () {
                     debouncedLayout();
                 }, 500);
             };
@@ -162,44 +162,46 @@ $(function() {
 }());
 
 // GoogleMap
-if ($('#map').length > 0) {
-    var google;
+// if ($('#map').length > 0) {
+//     var google;
 
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-        var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+//     function init() {
+//         // Basic options for a simple Google Map
+//         // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+//         // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
+//         var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
 
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 7,
-            // The latitude and longitude to center the map (always required)
-            center: myLatlng,
-            // How you would like to style the map. 
-            scrollwheel: false,
-            styles: [{ "featureType": "administrative.land_parcel", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.man_made", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "simplified" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [{ "hue": "#f49935" }] }, { "featureType": "road.highway", "elementType": "labels", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "hue": "#fad959" }] }, { "featureType": "road.arterial", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.local", "elementType": "labels", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "hue": "#a1cdfc" }, { "saturation": 30 }, { "lightness": 49 }] }]
-        };
+//         var mapOptions = {
+//             // How zoomed in you want the map to start at (always required)
+//             zoom: 7,
+//             // The latitude and longitude to center the map (always required)
+//             center: myLatlng,
+//             // How you would like to style the map.
+//             scrollwheel: false,
+//             styles: [{ "featureType": "administrative.land_parcel", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.man_made", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "simplified" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [{ "hue": "#f49935" }] }, { "featureType": "road.highway", "elementType": "labels", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "hue": "#fad959" }] }, { "featureType": "road.arterial", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.local", "elementType": "labels", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "hue": "#a1cdfc" }, { "saturation": 30 }, { "lightness": 49 }] }]
+//         };
 
-        // Get the HTML DOM element that will contain your map 
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-        // Create the Google Map using out element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-        var addresses = ['Brooklyn'];
-        for (var x = 0; x < addresses.length; x++) {
-            $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&sensor=false', null, function(data) {
-                var p = data.results[0].geometry.location
-                var latlng = new google.maps.LatLng(p.lat, p.lng);
-                new google.maps.Marker({
-                    position: latlng,
-                    map: map,
-                    icon: 'images/loc.png'
-                });
+//         // Get the HTML DOM element that will contain your map
+//         // We are using a div with id="map" seen below in the <body>
+//         var mapElement = document.getElementById('map');
+//         // Create the Google Map using out element and options defined above
+//         var map = new google.maps.Map(mapElement, mapOptions);
+//         var addresses = ['Brooklyn'];
+//         for (var x = 0; x < addresses.length; x++) {
+//             $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&sensor=false', null, function (data) {
+//                 var p = data.results[0].geometry.location
+//                 var latlng = new google.maps.LatLng(p.lat, p.lng);
+//                 new google.maps.Marker({
+//                     position: latlng,
+//                     map: map,
+//                     icon: 'images/loc.png'
+//                 });
 
-            });
-        }
+//             });
+//         }
 
-    }
-    google.maps.event.addDomListener(window, 'load', init);
-}
+//     }
+//     google.maps.event.addDomListener(window, 'load', init);
+// }
+
+
